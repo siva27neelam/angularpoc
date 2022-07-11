@@ -1,0 +1,45 @@
+.topnav{
+    background-color: #1976d2;
+    text-align: center;
+    width: 100%;
+   
+  }
+
+.userform{
+    text-align: left;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.mainregister{
+   
+    display: inline-block;
+    width: 650px;
+    background-color: #F5F5F5	;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+}
+
+.h2txt{
+    font-size: 22px;
+    color: white;
+    padding: 4px;
+  }
+
+
+
+  table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+  }
+  table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
