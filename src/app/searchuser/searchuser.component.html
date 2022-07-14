@@ -1,0 +1,90 @@
+
+<div class="content" role="main">
+    <div class = "mainregister">
+      <div class="topnav"> 
+        <div class ="h2txt">Search Users</div>  </div>
+
+
+      
+        <div class="formserach">
+        <form [formGroup]="form" (ngSubmit)="search(form)">
+           <div class="columns">
+    <div class="column">
+        <mat-form-field >
+            <mat-label>First Name</mat-label>
+            <input matInput  formControlName="firstName">
+          </mat-form-field>
+          
+        
+ </div>
+ <div class="column">
+    <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput  formControlName="lastName">
+      </mat-form-field>
+ </div>
+ </div>    
+           
+
+               
+              <div class ="formserach"> </div>
+              <button type ="submit" mat-raised-button color="primary" [disabled]="!form.valid">Submit</button>  &nbsp;<button (click) = "clear()" mat-raised-button>clear</button>
+        </form>
+    </div>
+      </div>
+
+      
+</div>
+<
+<div class="content" role="main" *ngIf="users">
+   
+      <div class="topnav"> 
+        <div class ="h2txt">Search Results</div>  </div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> First Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> Last Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef> City </th>
+    <td mat-cell *matCellDef="let element"> {{element.address.city}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="state">
+    <th mat-header-cell *matHeaderCellDef> State </th>
+    <td mat-cell *matCellDef="let element"> {{element.address.state}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="zipcode">
+    <th mat-header-cell *matHeaderCellDef> ZipCode </th>
+    <td mat-cell *matCellDef="let element"> {{element.address.zipcode}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+      
+
+    
+
+      
+</div>
+
+

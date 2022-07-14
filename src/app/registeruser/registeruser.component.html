@@ -1,4 +1,7 @@
-<!--The whole content below can be removed with the new code.-->
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+  </head>
+<div class="content" role="main">
 <div class = "mainregister">
   <div class="topnav"> 
     <div class ="h2txt"> Register Person</div>  </div>
@@ -6,57 +9,64 @@
   
     <form [formGroup]="angForm" novalidate (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label class="center-block"><span>First Name</span>
-              <input class="form-control" formControlName="firstName">
-            </label>
+            <div class="columns">
+              <div class="column">
+            <mat-form-field >
+              <mat-label>First Name</mat-label>
+              <input matInput  formControlName="firstName">
+            </mat-form-field>
+         </div>
           
-          <div *ngIf="angForm.controls['firstName'].invalid && (angForm.controls['firstName'].dirty || angForm.controls['firstName'].touched)" class="alert alert-danger">
-            please enter firstName
-          </div>
+         
 
-        <br>
-            <label class="center-block"><span>Last Name</span>
-              <input class="form-control" formControlName="lastName">
-            </label>
+         <div class="column">
+            <mat-form-field >
+              <mat-label>Last Name</mat-label>
+              <input matInput  formControlName="lastName">
+            </mat-form-field>
          
-          <div *ngIf="angForm.controls['lastName'].invalid && (angForm.controls['lastName'].dirty || angForm.controls['lastName'].touched)" class="alert alert-danger">
-            please enter last name
           </div>
+       </div>
        
-        <br>
-            <label class="center-block"><span>Email Address</span>
-              <input class="form-control" formControlName="email">
-            </label>
-         
-          <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
-            please enter email address
-          </div>
+      
         
         <div formGroupName="address">
-        <br>
-            <label class="center-block"><span>Street</span>
-              <input class="form-control" formControlName="street">
-            </label>
-
-        <br>
-            <label class="center-block"><span>City</span>
-              <input class="form-control" formControlName="city">
-            </label>
-
-          <br>
-            <label class="center-block"><span>State</span>
-              <input class="form-control" formControlName="state">
-            </label>
-
-          <br>
-            <label class="center-block"><span>Zipcode</span>
-              <input class="form-control" formControlName="zipcode">
-            </label>
+          <div class="columns">
+            <div class="column">
+        <mat-form-field >
+          <mat-label>Street</mat-label>
+          <input matInput  formControlName="street">
+        </mat-form-field>
+</div>
+<div class="column">
+        <mat-form-field >
+          <mat-label>City</mat-label>
+          <input matInput  formControlName="city">
+        </mat-form-field>
+</div></div>
+<div class="columns">
+  <div class="column">
+          <mat-form-field >
+            <mat-label>State</mat-label>
+            <input matInput  formControlName="state">
+          </mat-form-field>
         </div>
-        <button type ="submit" class="button-26" role="button" [disabled]="!angForm.valid">Submit</button>
+        <div class="column">
+          <mat-form-field >
+            <mat-label>ZipCode</mat-label>
+            <input matInput  formControlName="zipcode">
+          </mat-form-field>
+        </div></div></div>
+        <div class="columns">
+          <div class="column">
+        <mat-form-field >
+          <mat-label>Email</mat-label>
+          <input matInput  formControlName="email">
+        </mat-form-field></div></div>
+        <button type ="submit" mat-raised-button color="primary" [disabled]="!angForm.valid">Submit</button>
     </div>
     </form>
-  <p>Form value: {{ angForm.value | json }}</p>
-  <p>Form status: {{ angForm.status | json }}</p>
+  <!-- <p>Form value: {{ angForm.value | json }}</p>
+  <p>Form status: {{ angForm.status | json }}</p> -->
   </div>
-</div>
+</div></div>

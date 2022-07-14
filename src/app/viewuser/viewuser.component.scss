@@ -1,0 +1,85 @@
+.topnav{
+    background-color: #1976d2;
+    text-align: center;
+    width: 100%;
+   
+  }
+
+.userform{
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainregister{
+   
+    display: inline-block;
+    width: 900px;
+    background-color: #F5F5F5	;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+}
+
+.h2txt{
+  font-size: 26px;
+  color: white;
+  padding: 20px;
+  font-family: 'Bebas Neue';
+  letter-spacing: 3px;
+
+}
+
+  .styled-table {
+    border-collapse: collapse;
+    text-align: left;
+    min-width: 650px;
+    margin-left:150px;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #324960;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.bkbtn{
+width:100px;
+color: #324960;
+margin-top: 20px; 
+}

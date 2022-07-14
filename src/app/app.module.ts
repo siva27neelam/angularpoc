@@ -8,19 +8,42 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListofusersComponent } from './listofusers/listofusers.component';
 import { MatTableModule } from '@angular/material/table'  
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { DeleteuserComponent } from './deleteuser/deleteuser.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { ViewuserComponent } from './viewuser/viewuser.component';
+import { SearchuserComponent } from './searchuser/searchuser.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisteruserComponent,
-    ListofusersComponent
+    ListofusersComponent,
+    DeleteuserComponent,
+    UpdateuserComponent,
+    ViewuserComponent,
+    SearchuserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatSidenavModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

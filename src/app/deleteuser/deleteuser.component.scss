@@ -31,24 +31,17 @@
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
 
 }
-
 .h2txt{
-    font-size: 26px;
-    color: white;
-    padding: 20px;
-    font-family: 'Bebas Neue';
-    letter-spacing: 3px;
+  font-size: 26px;
+  color: white;
+  padding: 20px;
+  font-family: 'Bebas Neue';
+  letter-spacing: 3px;
 
-  }
+}
 
-  table {
-    width: 960px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    
-  }
-  th.mat-header-cell {
-    text-align: left;
-    font-weight: bold;
-    font-size: 16px;
+.bkbtn{
+  width:100px;
+  color: #324960;
+  margin-top: 20px; 
   }
