@@ -12,7 +12,8 @@ export class RegisterserviceuserService {
 
   constructor(private http:HttpClient) { }
 
-  url:string = "http://localhost:8080/";
+  // url:string = "http://localhost:8080/"; - Use for local.
+  url:string= "https://spring-mongo-poc.herokuapp.com/";
 
   getlistofusers():Observable<User[]>{
     return this.http.get<User[]>(this.url+"users");
@@ -28,7 +29,9 @@ export class RegisterserviceuserService {
   }
 
   deleteuser(request:string){
-    return this.http.delete(this.url+"user/"+request).subscribe(() => console.log("user deleted"));
+    return this.http.delete(this.url+"user/"+request).subscribe((data) => {console.log("user deleted") }, (error) =>{
+      console.log("In error code:" + error.status)
+    });
   }
 
   viewuser(request:string):Observable<User>{

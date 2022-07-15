@@ -1,11 +1,12 @@
 <div class="content" role="main">
     <div class = "mainregister">
       <div class="topnav"> 
-        <div class ="h2txt">User Details</div>  </div>
+        <div class ="h2txt">User Details</div>  </div>  
+
         
+
+
         <table class ="styled-table" >
- 
-       
         <tbody>
         <tr>
           <td style ="font-weight: bold">First Name</td>
@@ -35,14 +36,10 @@
             <td style ="font-weight: bold">Zipcode</td>
               <td>{{user.address.zipcode}}</td>
           </tr>
-         
-         
-        
-         
-       
+
         </tbody>
         </table>
 
             </div>
-            <button class ="bkbtn" (click)="back()">Back</button>
+            <button mat-raised-button color="primary" class ="bkbtn" (click)="back()">Back</button>
             </div>

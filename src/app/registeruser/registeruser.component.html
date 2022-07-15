@@ -25,10 +25,25 @@
               <input matInput  formControlName="lastName">
             </mat-form-field>
          
-          </div>
-       </div>
+          </div></div>
+          <div class="columns">
+            <div class="column">
+          <mat-form-field >
+        <mat-label>Hobbies</mat-label>
+        <mat-select formControlName="hobbies" multiple>
+          <mat-option *ngFor="let hobby of hobbiesList" [value]="hobby">{{hobby}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div><div class="column">
+      <mat-form-field >
+        <mat-label>Region</mat-label>
+        <mat-select formControlName="region">
+          <mat-option *ngFor="let region of regionList" [value]="region">{{region}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div></div>
        
-      
+       
         
         <div formGroupName="address">
           <div class="columns">
@@ -63,7 +78,8 @@
           <mat-label>Email</mat-label>
           <input matInput  formControlName="email">
         </mat-form-field></div></div>
-        <button type ="submit" mat-raised-button color="primary" [disabled]="!angForm.valid">Submit</button>
+        <button type ="submit" class = "btnsbmt" mat-raised-button [disabled]="!angForm.valid">Submit</button> 
+        <button type ="submit" class = "btnsbmtclr" (click)="clearform()" mat-raised-button>Clear</button>
     </div>
     </form>
   <!-- <p>Form value: {{ angForm.value | json }}</p>
