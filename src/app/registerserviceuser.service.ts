@@ -12,8 +12,8 @@ export class RegisterserviceuserService {
 
   constructor(private http:HttpClient) { }
 
-  // url:string = "http://localhost:8080/"; - Use for local.
-  url:string= "https://spring-mongo-poc.herokuapp.com/";
+   url:string = "http://localhost:8080/";
+  //url:string= "https://spring-mongo-poc.herokuapp.com/";
 
   getlistofusers():Observable<User[]>{
     return this.http.get<User[]>(this.url+"users");

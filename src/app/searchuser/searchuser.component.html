@@ -7,7 +7,7 @@
 
       
         <div class="formserach">
-        <form [formGroup]="form" (ngSubmit)="search(form)">
+        <form [formGroup]="form">
            <div class="columns">
     <div class="column">
         <mat-form-field >
@@ -24,19 +24,18 @@
       </mat-form-field>
  </div>
  </div>    
-           
-
-               
+  
               <div class ="formserach"> </div>
-              <button type ="submit" class = "btnsbmt" mat-raised-button color="primary" [disabled]="!form.valid">Submit</button>  &nbsp;<button (click) = "clear()" mat-raised-button>clear</button>
+              <button type ="submit" (click) = "search(form)" class = "btnsbmt" mat-raised-button color="primary" [disabled]="!form.valid">Submit</button>  &nbsp;
+              <button (click) = "clear()" mat-raised-button>clear</button>
         </form>
     </div>
       </div>
-
-      
 </div>
-<
-<div class="content" role="main" *ngIf="users">
+
+<div class="content" role="main" *ngIf="norecordsfound"> User record notfound </div>
+
+<div class="content" role="main" *ngIf="defaultbehaviour">
    
       <div class="topnav"> 
         <div class ="h2txt">Search Results</div>  </div>

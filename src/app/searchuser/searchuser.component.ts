@@ -11,6 +11,8 @@ import { User } from '../viewuser/mode';
 })
 export class SearchuserComponent implements OnInit {
   users:User[];
+  norecordsfound:boolean;
+  defaultbehaviour:boolean;
   displayedColumns: string[] = ['firstName', 'lastName', 'email','city','state','zipcode'];
   dataSource = new MatTableDataSource<User>();
 
@@ -30,15 +32,28 @@ export class SearchuserComponent implements OnInit {
   
     this.service.search(this.form.value.firstName, this.form.value.lastName).subscribe((response =>{
        this.users = response;
+       if(this.users.length == 0){
+        this.norecordsfound = true;
+       }
+       else{
+        this.norecordsfound = false;
+        this.defaultbehaviour = true;
+       }
        this.dataSource.data = response;
     }));
-    this.clear();
   }
 
 
   clear(){
+    console.log("Here in clear function");
+    this.norecordsfound = false;
+    this.defaultbehaviour = false;
     this.form.reset();
     this.users = [];
+    console.log("norecordsfound value: "+this.norecordsfound);
+
+  
+   
   }
 
 
