@@ -28,6 +28,16 @@ export class RegisterserviceuserService {
     }));
   }
 
+  updateUser(request:string){
+    console.log("hello");
+    let headers = new HttpHeaders;
+    headers = headers.set('Content-Type', 'application/json');
+    return this.http.patch(this.url+"user", request, {headers:headers}).subscribe((result => {
+      console.log("response here::" +JSON.stringify(result));
+    }));
+  }
+
+
   deleteuser(request:string){
     return this.http.delete(this.url+"user/"+request).subscribe((data) => {console.log("user deleted") }, (error) =>{
       console.log("In error code:" + error.status)

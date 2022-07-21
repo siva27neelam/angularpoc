@@ -52,8 +52,6 @@ export class SearchuserComponent implements OnInit {
     this.users = [];
     console.log("norecordsfound value: "+this.norecordsfound);
 
-  
-   
   }
 
 
